@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/rules"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="DROOLS/Drools"/>
+	<classpathentry kind="lib" path="/home/encima/applications/eclipse/plugins/org.eclipse.jdt.core_3.9.0.v20130604-1421.jar"/>
+	<classpathentry kind="lib" path="/home/encima/development/libs/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
