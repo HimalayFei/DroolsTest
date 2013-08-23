@@ -1,8 +1,14 @@
 package com.encima.dwc;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.encima.utils.DBTools;
 
 @Entity
 @Table(name="location")
@@ -15,6 +21,8 @@ public class Location {
 //	@Column(name="lng")
 	long lng;
 	
+	String description;
+
 	public Location(int id, long lat, long lng) {
 		this.setId(id);
 		this.setLat(lat);

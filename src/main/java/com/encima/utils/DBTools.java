@@ -29,7 +29,7 @@ public class DBTools {
 		ResultSet rs;
 		try {
 			stmt = conn.createStatement();
-			System.out.println(query);
+			System.out.println("***Executing: " + query);
 			Boolean res = stmt.execute(query);
 			if(res)
 				rs = stmt.getResultSet();
@@ -42,7 +42,18 @@ public class DBTools {
 		}
 	}
 	
-	public static void update(Connection conn, String query) {
+	public static String getLocationDescription(int locID) {
+		Connection cnx = dbConnect("root", "root", "gsn");
+		ResultSet rs = execute(cnx, String.format("SELECT * FROM location WHERE id=%d;", locID));
+		String descrip = null;
+		try {
+			while(rs.next()) {
+				descrip = rs.getString("description");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return descrip;
 	}
 	
 	public static void close(Connection conn) {
@@ -102,7 +113,6 @@ public class DBTools {
 	   try {
 			while(rs.next()) {
 				String rule = rs.getString("rule");
-				DroolsTools.addRule(kbuilder, rule);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

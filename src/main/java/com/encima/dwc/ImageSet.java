@@ -19,6 +19,17 @@ public class ImageSet {
 	public ImageSet() {
 	}
 	
+	public ImageSet(int id, int eventId, String identifier) {
+		this.id = id;
+		this.eventId = eventId;
+		this.identifier = identifier;
+	}
+	
+	public ImageSet(int eventId, String identifier) {
+		this.eventId = eventId;
+		this.identifier = identifier;
+	}
+	
 	public int getId() {
 		return id;
 	}

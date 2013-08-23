@@ -52,5 +52,6 @@
 	<classpathentry kind="lib" path="/home/encima/development/java/libs/hibernate/staxmapper-1.1.0.Final.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Drools"/>
 	<classpathentry kind="lib" path="/opt/eclipse/plugins/org.eclipse.jdt.core_3.9.0.v20130604-1421.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

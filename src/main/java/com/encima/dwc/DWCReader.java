@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.SQLException;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
@@ -28,7 +27,7 @@ import com.encima.dwc.HibernateHelper;
 import com.encima.dwc.Identification;
 import com.encima.dwc.ImageSet;
 import com.encima.dwc.Occurrence;
-import com.encima.dwc.Unzipper;
+import com.encima.utils.Unzipper;
 
 public class DWCReader {
 	
