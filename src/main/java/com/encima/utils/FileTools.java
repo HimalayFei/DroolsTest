@@ -22,7 +22,7 @@ public class FileTools {
 		        results += line + " \n";
 		    }
 		    reader.close();
-		    System.out.println(results);
+//		    System.out.println(results);
 		    return results;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -31,5 +31,6 @@ public class FileTools {
 		}
 		return null;
 	}
+	
 	
 }

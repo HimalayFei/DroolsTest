@@ -8,6 +8,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.drools.builder.KnowledgeBuilder;
 
@@ -42,18 +45,20 @@ public class DBTools {
 		}
 	}
 	
-	public static String getLocationDescription(int locID) {
+	public static List<String> getLocationDescription(int locID) {
 		Connection cnx = dbConnect("root", "root", "gsn");
 		ResultSet rs = execute(cnx, String.format("SELECT * FROM location WHERE id=%d;", locID));
-		String descrip = null;
+		ArrayList<String> descrip = new ArrayList<String>();
 		try {
-			while(rs.next()) {
-				descrip = rs.getString("description");
+			if(rs.next()) {
+				return Arrays.asList(rs.getString("description").split(","));
+			}else{
+				return null;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return descrip;
+		return null;
 	}
 	
 	public static void close(Connection conn) {
